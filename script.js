@@ -88,12 +88,16 @@ function applyConfigLinks() {
     el.textContent = CONFIG.phone;
   });
 
-  // Pricing session buttons (opens Calendly in new tab)
-  document.querySelectorAll('.pricing-card .btn').forEach((el) => {
+  // Pricing session buttons (30 and 60 min open Calendly in new tab)
+  document.querySelectorAll('.pricing-book-btn').forEach((el) => {
     el.href = CONFIG.calendlyUrl;
     el.target = '_blank';
     el.rel = 'noopener noreferrer';
   });
+
+  // Extended support quote button
+  const quoteBtn = document.getElementById('pricing-quote-btn');
+  if (quoteBtn) quoteBtn.href = mailto;
 
   // HelpWire link in hero
   const helpWireLink = document.querySelector('.trust-line .inline-link');
