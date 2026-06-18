@@ -13,12 +13,9 @@ const CONFIG = {
   phone: '954-994-6688',
   phoneTel: '+19549946688',
 
-  // Action links — replace # placeholders with real URLs
-  requestSupportUrl: 'https://calendly.com/morrowtechnology',
-  stripe30MinUrl: '#',           // TODO: Stripe payment link — 30 min
-  stripe60MinUrl: '#',           // TODO: Stripe payment link — 60 min
-  stripeGeneralUrl: '#',           // TODO: General Stripe link (disclaimer)
-  helpWireUrl: '#',                // TODO: HelpWire info or signup URL
+  // Booking and external links
+  calendlyUrl: 'https://calendly.com/morrowtechnology',
+  helpWireUrl: 'https://www.helpwire.app/',
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -75,7 +72,7 @@ function applyConfigLinks() {
 
   // Request Support buttons (opens Calendly in new tab)
   document.querySelectorAll('#hero-request-support, #contact-request-support').forEach((el) => {
-    el.href = CONFIG.requestSupportUrl;
+    el.href = CONFIG.calendlyUrl;
     el.target = '_blank';
     el.rel = 'noopener noreferrer';
   });
@@ -91,18 +88,20 @@ function applyConfigLinks() {
     el.textContent = CONFIG.phone;
   });
 
-  // Pricing Stripe links
-  const pricingLinks = document.querySelectorAll('.pricing-card .btn');
-  if (pricingLinks[0]) pricingLinks[0].href = CONFIG.stripe30MinUrl;
-  if (pricingLinks[1]) pricingLinks[1].href = CONFIG.stripe60MinUrl;
+  // Pricing session buttons (opens Calendly in new tab)
+  document.querySelectorAll('.pricing-card .btn').forEach((el) => {
+    el.href = CONFIG.calendlyUrl;
+    el.target = '_blank';
+    el.rel = 'noopener noreferrer';
+  });
 
   // HelpWire link in hero
   const helpWireLink = document.querySelector('.trust-line .inline-link');
-  if (helpWireLink) helpWireLink.href = CONFIG.helpWireUrl;
-
-  // Stripe link in pricing disclaimer
-  const disclaimerStripe = document.querySelector('.disclaimer .inline-link');
-  if (disclaimerStripe) disclaimerStripe.href = CONFIG.stripeGeneralUrl;
+  if (helpWireLink) {
+    helpWireLink.href = CONFIG.helpWireUrl;
+    helpWireLink.target = '_blank';
+    helpWireLink.rel = 'noopener noreferrer';
+  }
 }
 
 /** Smooth scroll for in-page anchor links */
