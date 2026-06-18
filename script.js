@@ -10,7 +10,8 @@
 const CONFIG = {
   // Business contact
   email: 'morrowtechfl@gmail.com',
-  // phone: '', // TODO: Add phone number if needed
+  phone: '954-994-6688',
+  phoneTel: '+19549946688',
 
   // Action links — replace # placeholders with real URLs
   requestSupportUrl: 'https://calendly.com/morrowtechnology',
@@ -82,6 +83,12 @@ function applyConfigLinks() {
   // Email buttons
   document.querySelectorAll('#hero-email, #contact-email-btn').forEach((el) => {
     el.href = mailto;
+  });
+
+  // Phone links
+  document.querySelectorAll('#contact-phone, #footer-phone').forEach((el) => {
+    el.href = `tel:${CONFIG.phoneTel}`;
+    el.textContent = CONFIG.phone;
   });
 
   // Pricing Stripe links

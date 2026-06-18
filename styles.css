@@ -751,14 +751,28 @@ ul {
   margin-bottom: 1.5rem;
 }
 
-.contact-email {
-  font-size: 1.125rem;
-  font-weight: 600;
+.contact-info {
   margin-bottom: 2rem;
 }
 
+.contact-phone,
+.contact-email {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.contact-phone {
+  margin-bottom: 0.35rem;
+}
+
+.contact-phone a,
 .contact-email a {
   color: var(--royal);
+}
+
+.footer-separator {
+  margin: 0 0.5rem;
+  color: rgba(255, 255, 255, 0.35);
 }
 
 .contact-actions {
