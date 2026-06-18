@@ -42,6 +42,14 @@ html {
   scroll-padding-top: var(--header-height);
 }
 
+.page-top-anchor {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  scroll-margin-top: 0;
+}
+
 body {
   font-family: var(--font);
   font-size: 1rem;

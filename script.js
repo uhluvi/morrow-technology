@@ -85,15 +85,34 @@ function applyConfigLinks() {
   if (helpWireLink) helpWireLink.href = CONFIG.helpWireUrl;
 }
 
+/** Scroll to the very top of the page */
+function scrollToTop(smooth = true) {
+  const behavior = smooth ? 'smooth' : 'auto';
+
+  window.scrollTo({ top: 0, left: 0, behavior });
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+
+  if (smooth) {
+    window.setTimeout(() => {
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }, 450);
+  }
+}
+
 /** Smooth scroll for in-page anchor links only */
 function initSmoothScroll() {
+  if (window.location.hash === '#top') {
+    scrollToTop(false);
+  }
+
   const siteLogo = document.getElementById('site-logo');
 
   if (siteLogo) {
     siteLogo.addEventListener('click', (e) => {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      history.pushState(null, '', '#top');
+      scrollToTop(true);
     });
   }
 
@@ -106,7 +125,7 @@ function initSmoothScroll() {
 
       if (targetId === '#top') {
         e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        scrollToTop(true);
         return;
       }
 
