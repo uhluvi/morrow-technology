@@ -62,7 +62,7 @@ function applyConfigLinks() {
   const mailto = `mailto:${CONFIG.email}`;
 
   document.querySelectorAll(
-    '#hero-request-support, #contact-request-support, .pricing-book-btn'
+    '#hero-request-support, #contact-request-support, .pricing-book-btn, .cta-band .btn'
   ).forEach((el) => {
     el.href = CONFIG.calendlyUrl;
     el.target = '_blank';

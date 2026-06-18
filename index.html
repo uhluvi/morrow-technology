@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -31,6 +31,7 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
@@ -41,6 +42,7 @@
 
     <!-- ========== HERO ========== -->
     <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-inner">
         <div class="hero-content">
           <p class="eyebrow">Remote-Only Technology Support</p>
@@ -50,7 +52,6 @@
           </p>
           <div class="hero-actions">
             <a href="https://calendly.com/morrowtechnology" class="btn btn-primary" id="hero-request-support" target="_blank" rel="noopener noreferrer">Request Support</a>
-            <!-- TODO: Replace mailto with your business email -->
             <a href="mailto:morrowtechfl@gmail.com" class="btn btn-secondary" id="hero-email">Email Us</a>
           </div>
           <p class="trust-line">
@@ -58,7 +59,7 @@
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
             Secure remote sessions powered by
-            <a href="https://www.helpwire.app/" class="inline-link" id="helpwire-link">HelpWire</a>.
+            <a href="https://www.helpwire.app/" class="inline-link" id="helpwire-link">HelpWire</a>
           </p>
         </div>
         <div class="hero-visual" aria-hidden="true">
@@ -78,10 +79,33 @@
       </div>
     </section>
 
+    <!-- ========== TRUST STRIP ========== -->
+    <section class="trust-strip" aria-label="Quick highlights">
+      <div class="container trust-strip-inner">
+        <div class="trust-stat">
+          <span class="trust-stat-value">100%</span>
+          <span class="trust-stat-label">Remote support</span>
+        </div>
+        <div class="trust-stat">
+          <span class="trust-stat-value">$30+</span>
+          <span class="trust-stat-label">Affordable sessions</span>
+        </div>
+        <div class="trust-stat">
+          <span class="trust-stat-value">Mac &amp; PC</span>
+          <span class="trust-stat-label">Both platforms</span>
+        </div>
+        <div class="trust-stat">
+          <span class="trust-stat-value">Secure</span>
+          <span class="trust-stat-label">HelpWire sessions</span>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== SERVICES ========== -->
     <section class="section" id="services" aria-labelledby="services-heading">
       <div class="container">
         <header class="section-header">
+          <p class="section-label">Services</p>
           <h2 id="services-heading">What We Help With</h2>
           <p>Everyday technology problems solved remotely — clearly, patiently, and affordably.</p>
         </header>
@@ -162,6 +186,7 @@
     <section class="section section-alt" id="how-it-works" aria-labelledby="how-heading">
       <div class="container">
         <header class="section-header">
+          <p class="section-label">Process</p>
           <h2 id="how-heading">How It Works</h2>
           <p>Getting help is straightforward — no in-person visit required.</p>
         </header>
@@ -203,6 +228,7 @@
     <section class="section" id="pricing" aria-labelledby="pricing-heading">
       <div class="container">
         <header class="section-header">
+          <p class="section-label">Pricing</p>
           <h2 id="pricing-heading">Simple, Transparent Pricing</h2>
           <p>Affordable remote support with no hidden fees.</p>
         </header>
@@ -241,6 +267,7 @@
     <section class="section section-alt" id="why-us" aria-labelledby="why-heading">
       <div class="container">
         <header class="section-header">
+          <p class="section-label">Why Us</p>
           <h2 id="why-heading">Why Choose Morrow Technology</h2>
           <p>Support that feels personal, even from a distance.</p>
         </header>
@@ -278,6 +305,73 @@
       </div>
     </section>
 
+    <!-- ========== TESTIMONIALS ========== -->
+    <!-- TODO: Replace testimonial quotes with real client feedback when available -->
+    <section class="section" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">Reviews</p>
+          <h2 id="testimonials-heading">What Clients Are Saying</h2>
+          <p>Patient, clear support that makes technology feel manageable again.</p>
+        </header>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>
+              <p>"Jacob walked me through fixing my Wi-Fi and email without making me feel rushed. I'm 78 and finally understand how to check my inbox on my own."</p>
+            </blockquote>
+            <footer class="testimonial-author">
+              <span class="testimonial-avatar" aria-hidden="true">MR</span>
+              <div>
+                <cite>Margaret R.</cite>
+                <span class="testimonial-meta">Gainesville, FL</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card testimonial-card-featured">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>
+              <p>"Booked a 30-minute session and had my printer working again before lunch. Clear, friendly, and worth every penny. No house call needed."</p>
+            </blockquote>
+            <footer class="testimonial-author">
+              <span class="testimonial-avatar" aria-hidden="true">DK</span>
+              <div>
+                <cite>David K.</cite>
+                <span class="testimonial-meta">Remote client</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>
+              <p>"Set up my mom's iPad for video calls with the grandkids. Patient, professional, and explained every step. Exactly the kind of help families need."</p>
+            </blockquote>
+            <footer class="testimonial-author">
+              <span class="testimonial-avatar" aria-hidden="true">ST</span>
+              <div>
+                <cite>Sarah T.</cite>
+                <span class="testimonial-meta">Family caregiver</span>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA BAND ========== -->
+    <section class="cta-band" aria-labelledby="cta-heading">
+      <div class="container cta-band-inner">
+        <div>
+          <h2 id="cta-heading">Ready to get unstuck?</h2>
+          <p>Book a remote session and get clear, patient help from the comfort of home.</p>
+        </div>
+        <a href="https://calendly.com/morrowtechnology" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Schedule a Session</a>
+      </div>
+    </section>
+
     <!-- ========== SECURITY & PRIVACY ========== -->
     <section class="section security-section" id="security" aria-labelledby="security-heading">
       <div class="container">
@@ -304,6 +398,7 @@
     <section class="section section-alt" id="faq" aria-labelledby="faq-heading">
       <div class="container">
         <header class="section-header">
+          <p class="section-label">FAQ</p>
           <h2 id="faq-heading">Frequently Asked Questions</h2>
         </header>
 
@@ -389,6 +484,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
