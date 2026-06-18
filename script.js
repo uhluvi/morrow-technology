@@ -65,6 +65,8 @@ function applyConfigLinks() {
     '#hero-request-support, #contact-request-support, .pricing-book-btn'
   ).forEach((el) => {
     el.href = CONFIG.calendlyUrl;
+    el.target = '_blank';
+    el.rel = 'noopener noreferrer';
   });
 
   document.querySelectorAll('#hero-email, #contact-email-btn').forEach((el) => {
