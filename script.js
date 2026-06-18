@@ -8,8 +8,8 @@
 
 const CONFIG = {
   email: 'morrowtechfl@gmail.com',
-  phone: '954-994-6688',
-  phoneTel: '+19549946688',
+  phone: '(305) 697-9228',
+  phoneTel: '+13056979228',
   calendlyUrl: 'https://calendly.com/morrowtechnology',
   helpWireUrl: 'https://www.helpwire.app/',
 };
