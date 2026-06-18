@@ -2,18 +2,14 @@
  * Morrow Technology — Site Scripts
  * ============================================
  * TODO: Update the CONFIG object below with your
- * real links when ready (Google Form, Calendly,
- * Stripe, HelpWire, phone number, etc.)
+ * email, phone number, Calendly URL, and HelpWire URL.
  * ============================================
  */
 
 const CONFIG = {
-  // Business contact
   email: 'morrowtechfl@gmail.com',
   phone: '954-994-6688',
   phoneTel: '+19549946688',
-
-  // Booking and external links
   calendlyUrl: 'https://calendly.com/morrowtechnology',
   helpWireUrl: 'https://www.helpwire.app/',
 };
@@ -38,7 +34,6 @@ function initMobileNav() {
     menu.classList.toggle('is-open', !isOpen);
   });
 
-  // Close menu when a nav link is clicked
   menu.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       toggle.setAttribute('aria-expanded', 'false');
@@ -46,7 +41,6 @@ function initMobileNav() {
     });
   });
 
-  // Close menu on escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       toggle.setAttribute('aria-expanded', 'false');
@@ -63,52 +57,33 @@ function initFooterYear() {
   }
 }
 
-/**
- * Apply CONFIG links to buttons and anchors.
- * Search for data-link attributes or known IDs.
- */
+/** Apply CONFIG links — keeps one place to update URLs later */
 function applyConfigLinks() {
   const mailto = `mailto:${CONFIG.email}`;
 
-  // Request Support buttons (opens Calendly in new tab)
-  document.querySelectorAll('#hero-request-support, #contact-request-support').forEach((el) => {
+  document.querySelectorAll(
+    '#hero-request-support, #contact-request-support, .pricing-book-btn'
+  ).forEach((el) => {
     el.href = CONFIG.calendlyUrl;
-    el.target = '_blank';
-    el.rel = 'noopener noreferrer';
   });
 
-  // Email buttons
   document.querySelectorAll('#hero-email, #contact-email-btn').forEach((el) => {
     el.href = mailto;
   });
 
-  // Phone links
   document.querySelectorAll('#contact-phone, #footer-phone').forEach((el) => {
     el.href = `tel:${CONFIG.phoneTel}`;
     el.textContent = CONFIG.phone;
   });
 
-  // Pricing session buttons (30 and 60 min open Calendly in new tab)
-  document.querySelectorAll('.pricing-book-btn').forEach((el) => {
-    el.href = CONFIG.calendlyUrl;
-    el.target = '_blank';
-    el.rel = 'noopener noreferrer';
-  });
-
-  // Extended support quote button
   const quoteBtn = document.getElementById('pricing-quote-btn');
   if (quoteBtn) quoteBtn.href = mailto;
 
-  // HelpWire link in hero
-  const helpWireLink = document.querySelector('.trust-line .inline-link');
-  if (helpWireLink) {
-    helpWireLink.href = CONFIG.helpWireUrl;
-    helpWireLink.target = '_blank';
-    helpWireLink.rel = 'noopener noreferrer';
-  }
+  const helpWireLink = document.getElementById('helpwire-link');
+  if (helpWireLink) helpWireLink.href = CONFIG.helpWireUrl;
 }
 
-/** Smooth scroll for in-page anchor links */
+/** Smooth scroll for in-page anchor links only */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {

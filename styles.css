@@ -277,6 +277,8 @@ ul {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-bottom: 1.75rem;
+  position: relative;
+  z-index: 2;
 }
 
 .hero .btn-secondary {
@@ -297,6 +299,8 @@ ul {
   gap: 0.4rem;
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  z-index: 2;
 }
 
 .trust-icon {
@@ -562,6 +566,11 @@ ul {
   color: var(--gray-600);
   margin-bottom: 1.5rem;
   flex-grow: 1;
+}
+
+.pricing-card .btn {
+  position: relative;
+  z-index: 2;
 }
 
 .disclaimer {
