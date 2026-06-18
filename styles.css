@@ -707,6 +707,80 @@ ul {
   margin-top: 1px;
 }
 
+/* ========== About ========== */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 380px) 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-photo-wrap {
+  position: relative;
+}
+
+.about-photo-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -12px -12px 12px 12px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--royal-light) 0%, rgba(37, 99, 235, 0.15) 100%);
+  z-index: 0;
+}
+
+.about-photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--white);
+}
+
+.about-content .section-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.75rem;
+}
+
+.about-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+}
+
+.about-tagline {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--royal) !important;
+  letter-spacing: 0.04em;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.about-signature {
+  font-size: 0.9375rem !important;
+  font-weight: 600;
+  color: var(--navy) !important;
+  margin-bottom: 0 !important;
+}
+
 /* ========== Testimonials ========== */
 
 .testimonials-grid {
@@ -1190,6 +1264,32 @@ ul {
   .pricing-grid,
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .about-photo-wrap {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .about-content .section-label,
+  .about-content h2 {
+    text-align: center;
+  }
+
+  .about-content p,
+  .about-signature {
+    text-align: left;
+  }
+
+  .about-tagline {
+    text-align: center;
   }
 
   .trust-strip-inner {
