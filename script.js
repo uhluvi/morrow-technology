@@ -87,10 +87,28 @@ function applyConfigLinks() {
 
 /** Smooth scroll for in-page anchor links only */
 function initSmoothScroll() {
+  const siteLogo = document.getElementById('site-logo');
+
+  if (siteLogo) {
+    siteLogo.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      history.pushState(null, '', '#top');
+    });
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    if (anchor.id === 'site-logo') return;
+
     anchor.addEventListener('click', (e) => {
       const targetId = anchor.getAttribute('href');
       if (!targetId || targetId === '#') return;
+
+      if (targetId === '#top') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
 
       const target = document.querySelector(targetId);
       if (target) {
