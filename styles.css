@@ -350,59 +350,17 @@ ul {
 .hero-visual {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.hero-card {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem;
+.hero-banner {
   width: 100%;
-  max-width: 380px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-}
-
-.hero-card-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 1.25rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
-  background: #4ade80;
-  border-radius: 50%;
-  box-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
-}
-
-.hero-card-list li {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.625rem 0;
-  font-size: 0.9375rem;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.hero-card-list .check {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  background: rgba(37, 99, 235, 0.3);
-  color: #93c5fd;
-  border-radius: 50%;
-  font-size: 0.75rem;
-  flex-shrink: 0;
+  max-width: 540px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: block;
 }
 
 /* ========== Trust Strip ========== */
@@ -1272,7 +1230,13 @@ ul {
   }
 
   .hero-visual {
-    order: -1;
+    order: 0;
+    margin-top: 0.5rem;
+  }
+
+  .hero-banner {
+    max-width: 640px;
+    margin: 0 auto;
   }
 
   .services-grid,
